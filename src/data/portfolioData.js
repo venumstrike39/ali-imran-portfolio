@@ -296,6 +296,6 @@ export const showreelData = {
   description: "A showcase of dynamic AI visuals, engaging product ads, and creative animations by Ali Imran.",
   duration: "00:30",
   quality: "4K UHD • 60FPS",
-  videoUrl: "/showreel-2026.mp4",
+  videoUrl: "/showreel.mp4",
   poster: "/thumbnail.png"
 };

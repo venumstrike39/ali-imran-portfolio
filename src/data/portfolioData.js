@@ -293,9 +293,9 @@ export const processSteps = [
 export const showreelData = {
   title: "A WORLD OF VISUAL CREATIVITY",
   tagline: "OFFICIAL 2026 SHOWREEL • AI VIDEO CREATION & EDITING",
-  description: "A showcase of dynamic AI-generated scenes, cinematic concepts, automotive visual storytelling, and high-impact commercial editing.",
-  duration: "01:45",
+  description: "A showcase of dynamic AI visuals, engaging product ads, and creative animations by Ali Imran.",
+  duration: "00:30",
   quality: "4K UHD • 60FPS",
-  videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-  poster: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop"
+  videoUrl: "/showreel-2026.mp4",
+  poster: "/thumbnail.png "
 };

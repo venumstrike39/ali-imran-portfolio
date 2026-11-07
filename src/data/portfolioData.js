@@ -159,7 +159,7 @@ export const projects = [
     videoUrl: "/white duck family.mp4",
     client: "Family Entertainment Channel",
     role: "AI Lead Animator & Storyboarder",
-    featured: true
+    featured: false
   },
   {
     id: "proj-2",

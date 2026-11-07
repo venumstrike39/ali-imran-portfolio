@@ -156,7 +156,7 @@ export const projects = [
     resolution: "4K UHD 60FPS",
     ratio: "9:16",
     thumbnail: "/white duck.png",
-    videoUrl: "/white duck thumbnail.mp4",
+    videoUrl: "/white duck family.mp4",
     client: "Family Entertainment Channel",
     role: "AI Lead Animator & Storyboarder",
     featured: true
@@ -229,23 +229,23 @@ export const projects = [
     role: "AI Visualizer & Editor",
     featured: false
   },
-  {
-    id: "proj-6",
-    code: "PROJECT 06",
-    title: "Viral Retention Engine",
-    subtitle: "Ultra-fast pacing, kinetic captions, and sound design for TikTok and Instagram Reels.",
-    category: "SOCIAL MEDIA VIDEOS",
-    tags: ["Social Media", "Reels & Shorts", "Kinetic Subtitles", "Fast Pacing"],
-    description: "Multi-part vertical video series optimized for TikTok and Instagram algorithms. Features zero-dropoff pacing, sound design accents, animated zooms, and seamless looping.",
-    duration: "00:50",
-    resolution: "1080x1920 60FPS",
-    ratio: "9:16",
-    thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
-    client: "Top Creator Agency",
-    role: "Video Editor & Motion Designer",
-    featured: false
-  }
+{
+  id: "proj-6",
+  code: "PROJECT 06",
+  title: "Surah Al-Fatiha - Ayah 1 (Bismillah)",
+  subtitle: "Start every good thing with Bismillah. Animated Islamic educational video for kids.",
+  category: "ISLAMIC CONTENT",
+  tags: ["Islamic", "Quran", "Surah Al-Fatiha", "Kids Learning", "Animation"],
+  description: "An engaging Islamic short video teaching children the translation and lesson of Surah Al-Fatiha Ayah 1 (Bismillahir Rahmanir Raheem). Features 3D character animation, clear narration, and educational visuals.",
+  duration: "00:39",
+  resolution: "1080x1920 30FPS",
+  ratio: "9:16",
+  thumbnail: "/islam.png", // Yahan islam.png ki image link add karein
+  videoUrl: "/islam.mp4", // Yahan video_1.mp4 ki downloadable/hosted link add karein
+  client: "We Are Muslims",
+  role: "3D Animator & Video Creator",
+  featured: false
+}
 ];
 
 export const processSteps = [

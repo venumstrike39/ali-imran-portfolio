@@ -297,5 +297,5 @@ export const showreelData = {
   duration: "00:30",
   quality: "4K UHD • 60FPS",
   videoUrl: "/showreel-2026.mp4",
-  poster: "/thumbnail.png "
+  poster: "/thumbnail.png"
 };

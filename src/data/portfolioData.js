@@ -159,7 +159,7 @@ export const projects = [
     videoUrl: "/white duck family.mp4",
     client: "Family Entertainment Channel",
     role: "AI Lead Animator & Storyboarder",
-    featured: false
+    featured: true
   },
   {
     id: "proj-2",
@@ -172,8 +172,8 @@ export const projects = [
     duration: "01:30",
     resolution: "4K 60FPS",
     ratio: "16:9",
-    thumbnail: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    thumbnail: "/auto.png",
+    videoUrl: "/autoscale.mp4",
     client: "Automotive Content Creator",
     role: "Visual Concept & Sound Designer",
     featured: true

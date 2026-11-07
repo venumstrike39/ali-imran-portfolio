@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play, 
@@ -6,16 +6,9 @@ import {
   Film, 
   Eye, 
   ChevronRight,
-  Info,
-  Sparkles,
-  PlusCircle,
-  Volume2,
-  Settings,
-  Plus,
-  CheckCircle2
+  Sparkles
 } from 'lucide-react';
 import { categories, projects as defaultProjects } from '../data/portfolioData';
-import ProjectManagerModal from './ProjectManagerModal';
 
 // Individual Card with real hover-to-preview
 function ProjectCard({ project, onOpen }) {
@@ -165,46 +158,10 @@ function ProjectCard({ project, onOpen }) {
 
 export default function Projects({ onOpenProject }) {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
-  const [isManagerOpen, setIsManagerOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState(null);
-
-  // Load projects from localStorage or fallback to default
-  const [projectsList, setProjectsList] = useState(() => {
-    try {
-      const saved = localStorage.getItem('ali_imran_projects');
-      if (saved) return JSON.parse(saved);
-    } catch (e) {
-      console.warn("Could not load stored projects", e);
-    }
-    return defaultProjects;
-  });
-
-  const handleSaveProjects = (newList) => {
-    setProjectsList(newList);
-    try {
-      localStorage.setItem('ali_imran_projects', JSON.stringify(newList));
-      showToast("Projects updated and saved successfully!");
-    } catch (e) {
-      console.warn("Could not save to localStorage", e);
-    }
-  };
-
-  const handleResetProjects = () => {
-    setProjectsList(defaultProjects);
-    try {
-      localStorage.removeItem('ali_imran_projects');
-      showToast("Reset to default showcase projects");
-    } catch (e) {}
-  };
-
-  const showToast = (msg) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 3000);
-  };
 
   const filteredProjects = selectedCategory === "ALL" 
-    ? projectsList 
-    : projectsList.filter(p => p.category === selectedCategory);
+    ? defaultProjects 
+    : defaultProjects.filter(p => p.category === selectedCategory);
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden bg-[#071109]">
@@ -212,25 +169,10 @@ export default function Projects({ onOpenProject }) {
       <div className="absolute top-1/4 -right-[200px] w-[600px] h-[600px] bg-[#A8F542]/8 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute bottom-10 -left-[150px] w-[500px] h-[500px] bg-[#78B82A]/10 blur-[160px] rounded-full pointer-events-none" />
 
-      {/* Toast Notification */}
-      <AnimatePresence>
-        {toastMessage && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-2xl bg-[#122415] border border-[#A8F542] shadow-[0_10px_30px_rgba(0,0,0,0.8),0_0_20px_rgba(168,245,66,0.3)] text-xs font-mono-code text-[#F5F5EF] flex items-center gap-2.5"
-          >
-            <CheckCircle2 className="w-4 h-4 text-[#A8F542]" />
-            <span>{toastMessage}</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-10">
+        <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#101F12] border border-[#A8F542]/30 text-[#A8F542] text-xs font-mono-code uppercase tracking-widest mb-4">
             <Film className="w-3.5 h-3.5 text-[#A8F542]" />
             <span>PORTFOLIO GALLERY</span>
@@ -240,20 +182,9 @@ export default function Projects({ onOpenProject }) {
             FEATURED <span className="text-[#A8F542] neon-text-glow">PROJECTS</span>
           </h2>
 
-          <p className="font-space text-base sm:text-lg text-[#A7B3A1] max-w-2xl leading-relaxed mb-6">
+          <p className="font-space text-base sm:text-lg text-[#A7B3A1] max-w-2xl leading-relaxed">
             AI-assisted cartoon storytelling, automotive sensory content, and high-converting commercial video editing.
           </p>
-
-          {/* Action Trigger: Upload & Manage Projects */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setIsManagerOpen(true)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#122415] border border-[#A8F542]/50 hover:border-[#A8F542] text-[#A8F542] text-xs font-mono-code uppercase tracking-wider font-bold transition-all shadow-[0_0_25px_rgba(168,245,66,0.2)] hover:shadow-[0_0_35px_rgba(168,245,66,0.4)] hover:bg-[#162E1A] cursor-pointer"
-            >
-              <Plus className="w-4 h-4" />
-              <span>UPLOAD / MANAGE PROJECTS</span>
-            </button>
-          </div>
         </div>
 
         {/* Category Filter Tabs */}
@@ -296,32 +227,7 @@ export default function Projects({ onOpenProject }) {
           </AnimatePresence>
         </motion.div>
 
-        {/* Live Project Studio Banner */}
-        <div className="mt-14 p-6 rounded-2xl bg-[#0D180F] border border-[#A8F542]/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono-code text-[#A7B3A1]">
-          <div className="flex items-start sm:items-center gap-3">
-            <Info className="w-5 h-5 text-[#A8F542] flex-shrink-0 mt-0.5 sm:mt-0" />
-            <div>
-              <strong className="text-[#F5F5EF]">Dynamic Project Studio:</strong> Click <code className="text-[#A8F542] font-bold">"UPLOAD / MANAGE PROJECTS"</code> above to add new videos, edit descriptions, upload thumbnails, or delete projects directly on your live portfolio.
-            </div>
-          </div>
-          <button
-            onClick={() => setIsManagerOpen(true)}
-            className="px-4 py-2 rounded-xl bg-[#142617] text-[#A8F542] border border-[#A8F542]/30 hover:bg-[#1A381E] text-xs font-mono-code whitespace-nowrap cursor-pointer"
-          >
-            OPEN STUDIO
-          </button>
-        </div>
-
       </div>
-
-      {/* Project Manager Modal */}
-      <ProjectManagerModal
-        isOpen={isManagerOpen}
-        onClose={() => setIsManagerOpen(false)}
-        projectsList={projectsList}
-        onSaveProjects={handleSaveProjects}
-        onResetProjects={handleResetProjects}
-      />
     </section>
   );
 }

@@ -169,9 +169,9 @@ export const projects = [
     category: "YOUTUBE CONTENT",
     tags: ["Automotive Content", "ASMR Sound Design", "YouTube & Reels", "Macro Detail"],
     description: "Automotive-focused visual content concept engineered for YouTube and Instagram. Combines precision macro camera sweeps of exotic performance vehicles with hyper-detailed sensory sound design and crisp pacing.",
-    duration: "01:30",
+    duration: "0:20",
     resolution: "4K 60FPS",
-    ratio: "16:9",
+    ratio: "9:16",
     thumbnail: "/auto.png",
     videoUrl: "/autoscale.mp4",
     client: "Automotive Content Creator",
@@ -195,23 +195,23 @@ export const projects = [
     role: "AI Concept Director & Video Editor",
     featured: true
   },
-  {
-    id: "proj-4",
-    code: "PROJECT 04",
-    title: "Cyberpunk Cinematic Odyssey",
-    subtitle: "Volumetric lighting and cinematic AI worldbuilding concept trailer.",
-    category: "CINEMATIC AI VIDEOS",
-    tags: ["Cinematic AI", "Sci-Fi Concept", "Worldbuilding", "Runway Gen-3"],
-    description: "A cinematic AI short visual teaser exploring a rainy futuristic metropolis. Features complex volumetric neon illumination, camera dolly motions, and evocative atmospheric synth soundscapes.",
-    duration: "01:15",
-    resolution: "Cinema 2.39:1 4K",
-    ratio: "21:9",
-    thumbnail: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1200&auto=format&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    client: "Creative Studio Pitch",
-    role: "AI Visual Director",
-    featured: false
-  },
+{
+  id: "proj-4",
+  code: "PROJECT 04",
+  title: "AI in Smartphones & Technology",
+  subtitle: "Discussion on the benefits, convenience, and responsible use of AI in modern devices.",
+  category: "TECH & AI VIDEOS",
+  tags: ["Artificial Intelligence", "Smartphones", "Tech Podcast", "AI Ethics", "Productivity"],
+  description: "An informative podcast and video overview exploring how AI is transforming smartphones. Highlights key benefits like quick translation, summarization, and workflow automation, alongside essential discussions on privacy and responsible AI usage.",
+  duration: "00:50",
+  resolution: "1920x1080 30FPS",
+  ratio: "16:9",
+  thumbnail: "/Aiprodcast.png", // Yahan video ki poster/thumbnail link add karein
+  videoUrl: "/pordcast.mp4", // Yahan video_1.mp4 ki hosted/direct video link add karein
+  client: "Tech Talk Podcast",
+  role: "Video Editor & Content Producer",
+  featured: false
+},
   {
     id: "proj-5",
     code: "PROJECT 05",

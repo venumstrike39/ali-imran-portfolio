@@ -212,23 +212,23 @@ export const projects = [
   role: "Video Editor & Content Producer",
   featured: false
 },
-  {
-    id: "proj-5",
-    code: "PROJECT 05",
-    title: "Luminescence Luxury Fragrance",
-    subtitle: "Photorealistic AI fluid simulation and luxury packaging commercial.",
-    category: "PRODUCT PROMOTIONAL VIDEOS",
-    tags: ["Product Promotion", "Luxury Aesthetic", "Fluid Simulation", "Commercial"],
-    description: "A commercial advertisement for a luxury fragrance. Highlighting golden liquid physics, crystal refraction, and silky slow-motion transitions created via generative camera paths.",
-    duration: "00:35",
-    resolution: "4K 60FPS",
-    ratio: "9:16",
-    thumbnail: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=1200&auto=format&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-    client: "Luxe Parfums",
-    role: "AI Visualizer & Editor",
-    featured: false
-  },
+{
+  id: "proj-5",
+  code: "PROJECT 05",
+  title: "Rudraksha & Karungali Bracelet Promo",
+  subtitle: "3D Animated product showcase ad highlighting spiritual energy and premium craftsmanship.",
+  category: "PRODUCT PROMOTIONAL VIDEOS",
+  tags: ["3D Animation", "Product Ad", "Spiritual", "E-Commerce", "Motion Graphics"],
+  description: "A dynamic 3D animated product promo ad created for Devatam Store. Features character-led storytelling, product visualization, kinetic typography, and high-converting commercial editing for social media sales.",
+  duration: "00:50",
+  resolution: "1080x1920 30FPS",
+  ratio: "9:16",
+  thumbnail: "/Braclete.png", // Yahan image ki direct poster link add karein
+  videoUrl: "/braclete.mp4", // Yahan video_1.mp4 ki hosted/direct link add karein
+  client: "Devatam Store",
+  role: "3D Animator & Commercial Editor",
+  featured: false
+},
 {
   id: "proj-6",
   code: "PROJECT 06",

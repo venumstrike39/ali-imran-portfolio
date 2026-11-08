@@ -178,23 +178,24 @@ export const projects = [
     role: "Visual Concept & Sound Designer",
     featured: true
   },
-  {
-    id: "proj-3",
-    code: "PROJECT 03",
-    title: "AI Ads & Product Videos",
-    subtitle: "Creative concepts for product promotion, UGC-style ad formats, and branded social content.",
-    category: "AI ADVERTISEMENTS",
-    tags: ["AI Advertisements", "Product Promotion", "UGC Style", "Branded Content"],
-    description: "Creative concepts for product promotion, UGC-style ad formats, and branded social content. Built with high-retention 3-second visual hooks, photorealistic generative product environments, and compelling call-to-actions.",
-    duration: "00:45",
-    resolution: "4K Ultra-Sharp",
-    ratio: "9:16 & 16:9",
-    thumbnail: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=1200&auto=format&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    client: "DTC Brand Campaign",
-    role: "AI Concept Director & Video Editor",
-    featured: true
-  },
+
+ {
+  id: "proj-3",
+  code: "PROJECT 06",
+  title: "Buds4 Pro - Premium Sound Commercial",
+  subtitle: "Sleek product showcase and promotional ad highlighting true wireless audio experience.",
+  category: "AI UGC ADDS",
+  tags: ["Tech Commercial", "Product Showcase", "Audio Gear", "E-Commerce", "Motion Graphics"],
+  description: "A sleek promotional video and advertisement for Buds4 Pro wireless earbuds. Features high-quality product close-ups, lifestyle integration scenes, crisp voiceover, and commercial video editing tailored for social media conversion.",
+  duration: "00:19",
+  resolution: "1080x1920 30FPS",
+  ratio: "9:16",
+  thumbnail: "/airbuds.png", // Yahan image ki direct poster link add karein
+  videoUrl: "/airbuds.mp4", // Yahan video_1.mp4 ki hosted/direct video link add karein
+  client: "Gadgets Lab",
+  role: "Video Editor & Commercial Producer",
+  featured: true
+},
 {
   id: "proj-4",
   code: "PROJECT 04",

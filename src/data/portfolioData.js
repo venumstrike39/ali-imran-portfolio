@@ -156,7 +156,7 @@ export const projects = [
     resolution: "4K UHD 60FPS",
     ratio: "9:16",
     thumbnail: "/white duck.png",
-    videoUrl: "/white duck family.mp4",
+    videoUrl: "/whitw duck family.mp4",
     client: "Family Entertainment Channel",
     role: "AI Lead Animator & Storyboarder",
     featured: true
